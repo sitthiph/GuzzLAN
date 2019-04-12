@@ -8,5 +8,7 @@ public class PlayerList {
         this.playerList = new LinkedList<PlayerNode>();
     }
 
-    public
+    public void add(){
+        
+    }
 }
