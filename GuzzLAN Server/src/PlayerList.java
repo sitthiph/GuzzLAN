@@ -2,13 +2,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class PlayerList {
-    private List<PlayerNode> playerList;
+    private List<PlayerListNode> playerList;
 
     public PlayerList(){
-        this.playerList = new LinkedList<PlayerNode>();
+        this.playerList = new LinkedList<PlayerListNode>();
     }
 
-    public void add(){
-        
+    public void add(PlayerListNode player){
+
     }
 }
