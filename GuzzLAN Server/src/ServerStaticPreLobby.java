@@ -10,10 +10,12 @@ public class ServerStaticPreLobby {
     public static void main(String[] args) {
         List<String> existingPlayer = new ArrayList<>();
         /**
-         * ---> CATCH SERVER LOCAL DATA FROM "user_list.txt" <--- (lobby.add(user_list.txt);)
-         * if(user.logingIn())
+         * ---> CATCH SERVER LOCAL DATA FROM "user_list.txt" <--- (existingPlayer.add(user_list.txt);)
+         * if(user.logingIn()) // Click login;
+         *      Switch to "Login Scene"
          *     Login(existingPlayer);
-         * else if(user.SigningUp())
+         * else if(user.SigningUp()) // Click signup button;
+         *      Switch to "Sign up Scene"
          *     Signup(existingPlayer);
          */
 
