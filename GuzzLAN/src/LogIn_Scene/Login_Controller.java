@@ -24,12 +24,28 @@ public class Login_Controller {
     @FXML
     private Button SignupBotton;
 
-    public void changeScene(javafx.event.ActionEvent event) throws IOException {
-        Parent inGame = FXMLLoader.load(getClass().getClassLoader().getResource("inGame/inGame.fxml"));
-        Scene inGameScene = new Scene(inGame);
+    public void consumeinfo(javafx.event.ActionEvent event) throws Exception {
 
-        Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
-        window.setScene(inGameScene);
-        window.show();
+        staticData.username = username.getText();
+        staticData.password = password.getText();
+
+        /**
+         * Run server threads here. Throw in check in with server to see if the username and password is correct.
+         * return boolean statement;
+         */
+        boolean serverResult = true;
+
+        if(serverResult) {
+            Parent inGame = FXMLLoader.load(getClass().getClassLoader().getResource("inGame/inGame.fxml"));
+            Scene inGameScene = new Scene(inGame);
+
+            Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
+            window.setScene(inGameScene);
+            window.show();
+        }
+        else {
+            throw new Exception("Code not finished");
+        }
+
     }
 }
