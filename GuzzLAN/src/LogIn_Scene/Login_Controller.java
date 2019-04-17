@@ -11,9 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-import java.awt.event.ActionEvent;
-import java.io.IOException;
-
 public class Login_Controller {
     @FXML
     private TextField username;
@@ -36,7 +33,7 @@ public class Login_Controller {
         boolean serverResult = true;
 
         if(serverResult) {
-            Parent inGame = FXMLLoader.load(getClass().getClassLoader().getResource("inGame/inGame.fxml"));
+            Parent inGame = FXMLLoader.load(getClass().getClassLoader().getResource("In_Game/In_Game.fxml"));
             Scene inGameScene = new Scene(inGame);
 
             Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
