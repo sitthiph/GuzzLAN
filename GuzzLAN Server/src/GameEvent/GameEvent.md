@@ -62,11 +62,11 @@ ___
 
 # Luck of a Draw
 
-Luck of a Draw event allows player to gamble their money before doing their guess. Player will choose an number between 1 - 6 and amount of money they wish to gamble. If bet correctly (~16.7 %), the player will gain 3 times the amount gamble.
+Luck of a Draw event allows player to gamble their money before doing their guess. Player will choose an number between 1 - 6 and amount of money they wish to gamble. If bet correctly (~16.7 %), the player will gain 5 times the amount gambled.
 
 | Round | Money Rate | Money Start Rate| Money End Rate | Money Rate of Change | Appear Rate | Appear Start Rate | Appear End Rate  | Appear Rate of Change |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| All | Determine by Player | - | - | +300 % or -100 % | 10 % | - | - | 0 % |
+| All | Determine by Player | - | - | +500 % or -100 % | 10 % | - | - | 0 % |
 
 List of method :
 ```java
@@ -76,9 +76,12 @@ method two() // Place Holder.
 ___
 
 # Double Edge Sword
+
+Similarly to Luck of a Draw, Double Edge Sword aloows player to gamble fixed amount of money before doing their guess. Player will choose between `Head` or `Tail`. If choose correctly (50%), the player will gain doubled the amount gambled.
+
 | Round | Money Rate | Money Start Rate| Money End Rate | Money Rate of Change | Appear Rate | Appear Start Rate | Appear End Rate  | Appear Rate of Change |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| All | $10 - $200 | $10 | $200 | ~103.75% | 2% - 30% | 2% | 30% | 150% |
+| All | Randomized | - | - | +200 % or -100 % | 15 % | - | - | 0 % |
 
 List of method :
 ```java
@@ -88,9 +91,13 @@ method two() // Place Holder.
 ___
 
 # Payday
+
+Payday event pays the player a certain amount of money. The event does not begin appearing until round 6.
+
 | Round | Money Rate | Money Start Rate| Money End Rate | Money Rate of Change | Appear Rate | Appear Start Rate | Appear End Rate  | Appear Rate of Change |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| All | $10 - $200 | $10 | $200 | ~103.75% | 2% - 30% | 2% | 30% | 150% |
+| 0 - 5 | NA | NA | NA | NA | NA | NA | NA | NA |
+| 6 - All | $10 - $200 | $10 | $200 | ~103.75% | 2% - 30% | 2% | 30% | 150% |
 
 List of method :
 ```java
