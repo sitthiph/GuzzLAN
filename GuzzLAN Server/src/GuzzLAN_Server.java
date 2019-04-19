@@ -12,6 +12,11 @@ public class GuzzLAN_Server extends Application {
     Button button;
 
     public static void main(String[] args) {
+        ServerSocket serverSocket = new ServerSocket(8000);
+        Socket socket = serverSocket.accept();
+        DataOutputStream outputToClient = new DataOutputStream(socket.getOutputStream());
+        DataInputStream inputFromClient = new DataInputStream(socket.getInputStream()); 
+
         launch(args);
     }
 

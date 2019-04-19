@@ -9,11 +9,20 @@ import javafx.stage.Window;
 
 
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
 
 public class GuzzLANClient extends Application {
 
     public static void main(String[] args) {
         // Establish server connection;
+        Socket socket = new Socket("localhost", 8000);
+        DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
+        DataInputStream fromServer = new DataInputStream(socket.getInputStream());
+
 
         Thread loginApp = new Thread(() -> launch(args));
 
