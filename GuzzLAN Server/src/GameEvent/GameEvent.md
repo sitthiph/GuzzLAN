@@ -38,11 +38,13 @@ ___
 
 # Skip or Hit
 
-Skip or Hit event allows player to pay a certain amount to prevent them from being skipped.
+Skip or Hit event allows player to pay a certain amount to prevent them from being skipped. Instead of `Round`, the rate changes according to the guess `range`.
 
-| Round | Money Rate | Money Start Rate| Money End Rate | Money Rate of Change | Appear Rate | Appear Start Rate | Appear End Rate  | Appear Rate of Change |
+| `Range` | Money Rate | Money Start Rate| Money End Rate | Money Rate of Change | Appear Rate | Appear Start Rate | Appear End Rate  | Appear Rate of Change |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| All | $10 - $200 | $10 | $200 | ~103.75% | 2% - 30% | 2% | 30% | 150% |
+| >1000 | NA | NA | NA | NA | NA | NA | NA | NA |
+| 100 - 1000 | Randomized | $50 - $100 | $50 - $100 | N/A | 15% | 15% | 15% | 0% |
+| < 100 | Randomized | $50 - $100 | $50 - $100 | N/A | 30% | 30% | 30% | 0% |
 ___
 
 # Equivalent Exchange
@@ -51,7 +53,9 @@ Equivalent Exchange event allows player to voluntarily skip themselves for the r
 
 | Round | Money Rate | Money Start Rate| Money End Rate | Money Rate of Change | Appear Rate | Appear Start Rate | Appear End Rate  | Appear Rate of Change |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| All | $10 - $200 | $10 | $200 | ~103.75 % | 2 % - 30 % | 2 % | 30 % | 150 % |
+| 0 - 5 | Determind via algorithm | N/A | N/A | `DoubleGuess Cost` x ( (1 - 10) x 10) | 30 % | 30 % | 30 % | 0 % |
+| 6 - 40 | Determind via algorithm | N/A | N/A | `DoubleGuess Cost` x ( (1 - 10) x 10) | 5 % | - | - | 0 % |
+| 40+ | Determind via algorithm | N/A | N/A | `DoubleGuess Cost` x ( (1 - 10) x 10) | 30 % | 30 % | 30 % | 0 % |
 
 List of method :
 ```java
@@ -97,7 +101,7 @@ Payday event pays the player a certain amount of money. The event does not begin
 | Round | Money Rate | Money Start Rate| Money End Rate | Money Rate of Change | Appear Rate | Appear Start Rate | Appear End Rate  | Appear Rate of Change |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 0 - 5 | NA | NA | NA | NA | NA | NA | NA | NA |
-| 6 - All | $10 - $200 | $10 | $200 | ~103.75% | 2% - 30% | 2% | 30% | 150% |
+| 6+ | $10 - $200 | $10 | $200 | ~103.75% | 2% - 30% | 2% | 30% | 150% |
 
 List of method :
 ```java
@@ -107,9 +111,10 @@ method two() // Place Holder.
 ___
 
 # Hand of the Chosen One
+Hnad of the Chosen One event allows the player to pick any of the game event **EXCEPT FOR** `Payday`
 | Round | Money Rate | Money Start Rate| Money End Rate | Money Rate of Change | Appear Rate | Appear Start Rate | Appear End Rate  | Appear Rate of Change |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| All | $10 - $200 | $10 | $200 | ~103.75% | 2% - 30% | 2% | 30% | 150% |
+| All | $0 | $0 | $0 | 0% | 1% | 1% | 1% | 0% |
 
 List of method :
 ```java
