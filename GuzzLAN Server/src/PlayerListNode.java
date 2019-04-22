@@ -1,6 +1,6 @@
-public class PlayerListNode {
-    public PlayerListNode previous;
-    public PlayerListNode next;
+class PlayerListNode {
+     PlayerListNode previous;
+    PlayerListNode next;
 
 
 }
