@@ -6,16 +6,22 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
 
 public class GuzzLAN_Server extends Application {
 
     Button button;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(8000);
         Socket socket = serverSocket.accept();
         DataOutputStream outputToClient = new DataOutputStream(socket.getOutputStream());
-        DataInputStream inputFromClient = new DataInputStream(socket.getInputStream()); 
+        DataInputStream inputFromClient = new DataInputStream(socket.getInputStream());
 
         launch(args);
     }

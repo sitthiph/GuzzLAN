@@ -6,7 +6,7 @@ public class Player {
     private int winCount;
     private int loseCount;
 
-    public PlayerNode(String username, String pass, int money) {
+    public Player(String username, String pass, int money) {
         this.username = username;
         this.pass = pass;
         this.money = money;

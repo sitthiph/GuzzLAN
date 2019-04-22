@@ -1,4 +1,4 @@
 public class PlayerListNode {
-    private PlayerListNode previous;
-    private PlayerListNode next;
+    PlayerListNode previous;
+    PlayerListNode next;
 }
