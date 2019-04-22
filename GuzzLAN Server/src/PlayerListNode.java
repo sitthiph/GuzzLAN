@@ -1,5 +1,5 @@
 class PlayerListNode {
-     PlayerListNode previous;
+    PlayerListNode previous;
     PlayerListNode next;
 
 
