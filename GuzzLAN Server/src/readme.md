@@ -112,6 +112,7 @@ ___
 
 # Hand of the Chosen One
 Hnad of the Chosen One event allows the player to pick any of the game event **EXCEPT FOR** `Payday`
+
 | Round | Money Rate | Money Start Rate| Money End Rate | Money Rate of Change | Appear Rate | Appear Start Rate | Appear End Rate  | Appear Rate of Change |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | All | $0 | $0 | $0 | 0% | 1% | 1% | 1% | 0% |

@@ -1,6 +1,3 @@
-import java.util.LinkedList;
-import java.util.List;
-
 public class PlayerList {
     private PlayerListNode head, tail;
 
