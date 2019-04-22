@@ -1,3 +1,7 @@
+package Players;
+
+import Players.*;
+
 public class PlayerList {
     private PlayerListNode head, tail;
 
