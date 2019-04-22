@@ -1,4 +1,6 @@
 public class PlayerListNode {
-    PlayerListNode previous;
-    PlayerListNode next;
+    public PlayerListNode previous;
+    public PlayerListNode next;
+
+
 }

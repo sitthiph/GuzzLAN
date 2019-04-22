@@ -5,19 +5,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.stage.Window;
 
-
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 
 public class GuzzLANClient extends Application {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Establish server connection;
         Socket socket = new Socket("localhost", 8000);
         DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());

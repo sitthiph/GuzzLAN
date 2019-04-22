@@ -33,7 +33,7 @@ public class PlayerList {
         }
 
         previous = current.next;
-        current.next.
+        return null;
     }
 
     public PlayerListNode get(int index) {
@@ -44,7 +44,7 @@ public class PlayerList {
         PlayerListNode current = head;
         int i = 0;
         while (current != tail && i != index) {
-            prev = prev.next.next;
+            current.previous = current.previous.next.next;
             i++;
         }
 
