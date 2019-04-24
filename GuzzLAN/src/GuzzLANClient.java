@@ -14,9 +14,9 @@ public class GuzzLANClient extends Application {
 
     public static void main(String[] args) throws IOException {
         // Establish server connection;
-        Socket socket = new Socket("localhost", 8000);
-        DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
-        DataInputStream fromServer = new DataInputStream(socket.getInputStream());
+        //Socket socket = new Socket("localhost", 8000);
+        //DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
+        //DataInputStream fromServer = new DataInputStream(socket.getInputStream());
 
 
         Thread loginApp = new Thread(() -> launch(args));

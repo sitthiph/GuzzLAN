@@ -20,10 +20,10 @@ public class GuzzLAN_Server extends Application {
         Thread loginApp = new Thread(() -> launch(args));
         loginApp.start();
 
-        ServerSocket serverSocket = new ServerSocket(8000);
-        Socket socket = serverSocket.accept();
-        DataOutputStream outputToClient = new DataOutputStream(socket.getOutputStream());
-        DataInputStream inputFromClient = new DataInputStream(socket.getInputStream());
+        //ServerSocket serverSocket = new ServerSocket(8000);
+        //Socket socket = serverSocket.accept();
+        //DataOutputStream outputToClient = new DataOutputStream(socket.getOutputStream());
+        //DataInputStream inputFromClient = new DataInputStream(socket.getInputStream());
 
     }
 

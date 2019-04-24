@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="480.0" maxWidth="720.0" minHeight="480.0" minWidth="720.0" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LogIn_Scene.Login_Controller">
+<VBox maxHeight="480.0" maxWidth="720.0" minHeight="480.0" minWidth="720.0" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Client_Controller">
     <children>
         <MenuBar>
             <menus>
@@ -51,7 +51,7 @@
             </menus>
         </MenuBar>
       <AnchorPane />
-      <TextArea editable="false" prefHeight="511.0" prefWidth="720.0" wrapText="true" />
-      <TextField promptText="Enter Command Here..." />
+      <TextArea fx:id="prompt" editable="false" prefHeight="511.0" prefWidth="720.0" wrapText="true" />
+      <TextField fx:id="serverInput" onAction="#serverEnter" promptText="Enter Command Here..." />
     </children>
 </VBox>

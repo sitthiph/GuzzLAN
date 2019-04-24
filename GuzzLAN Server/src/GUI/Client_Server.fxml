@@ -52,6 +52,6 @@
         </MenuBar>
       <AnchorPane />
       <TextArea fx:id="prompt" editable="false" prefHeight="511.0" prefWidth="720.0" wrapText="true" />
-      <TextField promptText="Enter Command Here..." />
+      <TextField fx:id="serverInput" onAction="#serverEnter" promptText="Enter Command Here..." />
     </children>
 </VBox>
