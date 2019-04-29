@@ -38,4 +38,44 @@ public class ServerStaticPreLobby {
     public static void SignIp(List existingPlayer) {
 
     }
+
+    public static void compiler(String in) {
+
+    }
+}
+
+class ServerCompiler {
+    public static String help() {
+        return "/player <username>\n" +
+                "/player newaccount <username> <password>\n" +
+                "/player deleteaccount <username>\n" +
+                "/pause\n" +
+                "/resume\n" +
+                "/quit\n" +
+                "/help";
+    }
+    public static String invalid() {
+        return "Invalid command.";
+    }
+    public static String pause() {
+        return "Game has been pause.";
+    }
+    public static String resume() {
+        return "Game has been resume.";
+    }
+    public static void say(String text) {
+        System.out.println(text + "is said in the chat");
+    }
+    public static void clear() {
+        System.out.println("Chat cleared");
+    }
+    public static String player(String username) {
+        return "Player info is shown.";
+    }
+    public static String newAccount(String username, String password) {
+        return "New player has been created.";
+    }
+    public static String deleteAccount(String username) {
+        return "Account deleted";
+    }
 }

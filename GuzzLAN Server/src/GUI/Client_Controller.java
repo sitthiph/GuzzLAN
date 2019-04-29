@@ -10,7 +10,7 @@ public class Client_Controller {
     private TextArea prompt;
     @FXML
     private TextField serverInput;
-    private String promptText = "";
+    private String promptText = "Server started on <insert date API and time API here lolololol>";
 
     public void serverEnter(){
         String text = serverInput.getText();
